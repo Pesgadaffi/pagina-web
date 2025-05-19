@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro Practico</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <section class="form-container">
+        <form action="#" class="register-form">
+            <h2>Registro de Usuario</h2>
+
+            <label for="name">Nombre</label>
+            <input type="text" name="name" id="name" required>
+            
+            <label for="email">Correo</label>
+            <input type="email" name="email" id="email" required>
+        
+            <label for="mainprincipal">Main</label>
+            <input type="text" name="mainprincipal" id="mainprincipal" required>
+            
+            <div class="rol-box">
+                <span>Rol</span>
+                <label><input type="radio" name="rol" value="top"required>Top</label>
+                <label><input type="radio" name="rol" value="jg"required>Jungla</label>
+                <label><input type="radio" name="rol" value="mid"required>Mid</label>
+                <label><input type="radio" name="rol" value="adc"required>Adc</label>
+                <label><input type="radio" name="rol" value="sup"required>Sup</label>
+            </div>
+
+            <div class="checkbox-box">
+                <label><input type="checkbox" name="terminos" required>Acepto terminos y condiciones de la encuesta</label>
+            </div>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+    </section>
+</body>
+</html>
