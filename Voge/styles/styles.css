@@ -1,0 +1,134 @@
+/* Estilos CSS Generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Estilos para la cabecera (header) */
+.cabecera {
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+    display: flex; /* Habilita Flexbox para alinear elementos */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos: uno a la izquierda, el otro a la derecha */
+    align-items: center; /* Centra los elementos verticalmente */
+}
+
+.nombre-empresa {
+    font-size: 1.8em; /* Tamaño de fuente para el nombre de la empresa */
+    font-weight: bold; /* Negrita */
+}
+
+.opciones-cabecera ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Habilita Flexbox para las opciones de navegación */
+    gap: 25px; /* Espacio entre cada opción de la lista */
+}
+
+.opciones-cabecera li a {
+    color: rgb(255, 255, 255); /* Color del texto de los enlaces */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    font-size: 1.1em; /* Tamaño de fuente de los enlaces */
+    transition: color 0.3s ease; /* Transición suave para el cambio de color al pasar el ratón */
+}
+
+.opciones-cabecera li a:hover {
+    color: #ffd700; /* Color del texto al pasar el ratón (dorado) */
+}
+
+/* Estilos para el cuerpo principal (main content) */
+.cuerpo-principal {
+    padding: 40px 20px; /* Espaciado interno alrededor del contenido principal */
+    text-align: center; /* Centra el texto dentro de esta sección */
+}
+
+.seccion-productos {
+    display: flex; /* Habilita Flexbox para las tarjetas de productos */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+    gap: 30px; /* Espacio entre las tarjetas de productos */
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan a la siguiente línea si no hay espacio */
+}
+
+.tarjeta-producto {
+    background-color: #fff; /* Fondo blanco para cada tarjeta */
+    border: 1px solid #ddd; /* Borde gris claro */
+    border-radius: 8px; /* Esquinas redondeadas */
+    padding: 20px; /* Espaciado interno */
+    width: 300px; /* Ancho fijo para cada tarjeta */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    display: flex; /* Habilita Flexbox para el contenido de la tarjeta */
+    flex-direction: column; /* Apila los elementos dentro de la tarjeta verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente dentro de la tarjeta */
+    text-align: center; /* Centra el texto dentro de la tarjeta */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para efectos hover */
+}
+
+.tarjeta-producto:hover {
+    transform: translateY(-5px); /* Eleva la tarjeta ligeramente al pasar el ratón */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada al pasar el ratón */
+}
+
+.tarjeta-producto img {
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho de la tarjeta */
+    height: 180px; /* Altura fija para todas las imágenes */
+    object-fit: cover; /* Recorta la imagen para que cubra el área sin distorsionarse */
+    border-radius: 4px; /* Pequeñas esquinas redondeadas para la imagen */
+    margin-bottom: 15px; /* Espacio debajo de la imagen */
+}
+
+.nombre-producto {
+    font-size: 1.4em; /* Tamaño de fuente para el nombre del producto */
+    font-weight: bold; /* Negrita */
+    color: #333; /* Color de texto oscuro */
+    margin-bottom: 10px; /* Espacio debajo del nombre */
+}
+
+.opcion-comprar {
+    display: block; /* Hace que el enlace ocupe todo el ancho disponible */
+    background-color: #007bff; /* Color de fondo azul para el botón */
+    color: white; /* Color del texto blanco */
+    padding: 10px 15px; /* Espaciado interno del botón */
+    border-radius: 5px; /* Esquinas redondeadas del botón */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    font-weight: bold; /* Negrita en el texto del botón */
+    margin-top: 15px; /* Espacio encima del botón */
+    transition: background-color 0.3s ease; /* Transición suave para el cambio de color al pasar el ratón */
+}
+
+.opcion-comprar:hover {
+    background-color: #0056b3; /* Color de fondo más oscuro al pasar el ratón */
+}
+
+.precio-producto {
+    font-size: 1.2em; /* Tamaño de fuente para el precio */
+    color: #555; /* Color de texto gris */
+    margin-top: 8px; /* Espacio encima del precio */
+    font-weight: bold; /* Negrita */
+}
+
+/* Media Queries para Responsividad (Opcional pero muy recomendado) */
+@media (max-width: 768px) {
+    /* En pantallas más pequeñas (tablets y móviles) */
+    .cabecera {
+        flex-direction: column; /* Apila los elementos de la cabecera verticalmente */
+        padding: 10px; /* Menos padding */
+    }
+
+    .opciones-cabecera ul {
+        flex-direction: column; /* Apila las opciones de navegación verticalmente */
+        gap: 10px; /* Reduce el espacio entre ellas */
+        margin-top: 15px; /* Añade un poco de margen superior */
+    }
+
+    .tarjeta-producto {
+        width: 80%; /* Las tarjetas ocupan más ancho en pantallas pequeñas */
+    }
+
+    .seccion-productos {
+        flex-direction: column; /* Apila las tarjetas de productos verticalmente */
+        align-items: center; /* Centra las tarjetas apiladas */
+    }
+}
