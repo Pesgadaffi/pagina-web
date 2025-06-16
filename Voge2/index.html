@@ -39,10 +39,11 @@
             <a href="#experiencia" class="secondary-button">Nuestra Historia</a>
         </section>
 
+                <!-- Modelos -->
         <section class="seccion-modelos" id="modelos">
             <h2>Modelos Destacados</h2>
             <p>Encuentra la moto perfecta para tu próxima aventura.</p>
-
+            
             <div class="modelos-grid">
                 <div class="tarjeta-producto">
                     <div class="media-container">
@@ -111,25 +112,27 @@
                 </div>
                 
             </div>
-<!-- Botón de agendar prueba -->
-<div style="text-align:center; position: relative; z-index: 1;">
-  <button class="agendar-btn" onclick="mostrarPrueba(); return false;">Agendar prueba</button>
-</div>
+                <!-- Botón de agendar prueba -->
+            <div style="text-align:center; position: relative; z-index: 1;">
+                  <button class="agendar-btn" onclick="mostrarPrueba(); return false;">Agendar prueba</button>
+            </div>
 
-<!-- Modal de agendar prueba -->
-<div class="prueba-overlay" id="pruebaOverlay" onclick="cerrarPrueba()"></div>
-<div class="prueba-modal" id="pruebaModal">
-  <h4>Agendar prueba de manejo</h4>
-  <input type="text" placeholder="Nombre completo">
-  <input type="email" placeholder="Correo electrónico">
-  <input type="text" placeholder="Cédula">
-  <input type="tel" placeholder="Teléfono">
-  <button onclick="cerrarPrueba(); return false;">Enviar solicitud</button>
-</div>
-
+                <!-- Modal de agendar prueba -->
+            <div class="prueba-overlay" id="pruebaOverlay" onclick="cerrarPrueba()">
+                <div class="prueba-modal" id="pruebaModal">
+                  <h4>Agendar prueba de manejo</h4>
+                  <input type="text" placeholder="Nombre completo">
+                  <input type="email" placeholder="Correo electrónico">
+                  <input type="text" placeholder="Cédula">
+                  <input type="tel" placeholder="Teléfono">
+                  <input type="model" placeholder="Modelo">
+                  <button onclick="cerrarPrueba(); return false;">Enviar solicitud</button>
+                </div>
+            </div>
         </section>
     </main>
 
+    <!-- Toda la vuelta de abajo -->
     <footer class="pie-pagina">
         <div class="footer-columna">
             <h4>VOGE Motorcycles</h4>

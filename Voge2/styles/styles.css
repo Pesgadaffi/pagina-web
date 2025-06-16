@@ -1,4 +1,4 @@
-/* === LIMPIEZA BÁSICA Y TIPOGRAFÍA === */
+/* === L === */
 body {
     margin: 0;
     padding: 0;
@@ -24,7 +24,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* === CABECERA === */
+/* === Cabecera === */
 .cabecera {
     background: #161616;
     color: #fff;
@@ -38,7 +38,7 @@ a:hover {
     
 }
 
-/* === LOGO  */
+/* === Logo  */
 .nombre-empresa {
     height: auto;
     display: flex;
@@ -68,7 +68,7 @@ a:hover {
     color: #e60000;
 }
 
-/* === HERO === */
+/* === Hero === */
 .hero-section {
     background: url('https://i.ytimg.com/vi/IszbvSrqIeo/maxresdefault.jpg') center/cover no-repeat;
     color: #fff;
@@ -107,7 +107,7 @@ a:hover {
     background: #c00000;
 }
 
-/* === CONTENIDO PRINCIPAL === */
+/* === Contenido principal === */
 .cuerpo-principal {
     max-width: 1200px;
     margin: 0 auto;
@@ -139,7 +139,7 @@ a:hover {
     color: #fff;
 }
 
-/* === SECCIÓN MODELOS === */
+/* === Modelos === */
 .seccion-modelos {
     margin-bottom: 0px;
     text-align: center;
@@ -208,7 +208,7 @@ a:hover {
     background-color: #c00000;
 }
 
-/* === MODAL DE PRUEBA === */
+/* ===  === */
 .prueba-modal, .prueba-overlay {
     display: none;
     position: fixed;
@@ -307,7 +307,7 @@ a:hover {
 }
 
 
-/* === FOOTER === */
+/* === La vuelta del final === */
 .pie-pagina {
     background: #1a1a1a;
     color: #fff;
@@ -359,46 +359,8 @@ a:hover {
     border-color: #e60000;
 }
 
-/* === RESPONSIVE === */
-@media (max-width: 400px) {
-    .cabecera {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
 
-    .opciones-cabecera ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .hero-section {
-        padding: 60px 15px;
-    }
-
-    .cta-button {
-        font-size: 0.9em;
-        padding: 10px 20px;
-    }
-
-    .hero-contenido h1 {
-        font-size: 1.8em;
-    }
-
-    .modelos-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .tarjeta-producto img {
-        height: 160px;
-    }
-
-    .footer-columna h4 {
-        font-size: 1em;
-    }
-}
-
-/* === FICHA TÉCNICA MODAL (ESTILOS BÁSICOS) === */
+/* === Fichas tecnicas == */
 .ficha-modal {
     position: fixed;
     top: 50%;
