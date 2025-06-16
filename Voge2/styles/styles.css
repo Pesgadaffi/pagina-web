@@ -1,117 +1,87 @@
-/* Importación de fuentes de Google Fonts (Montserrat y Oswald) */
-/* Estas deben ir al inicio del archivo CSS */
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Oswald:wght@400;600&display=swap'); */
-
-/* Variables CSS para una paleta de colores coherente */
-:root {
-    --color-primario: #1a1a1a; /* Casi negro, para fondos oscuros */
-    --color-secundario: #f0f0f0; /* Gris claro, para fondos claros */
-    --color-acento: #e60000; /* Rojo/Naranja Voge */
-    --color-texto-claro: #ffffff;
-    --color-texto-oscuro: #333333;
-    --font-heading: 'Oswald', sans-serif;
-    --font-body: 'Montserrat', sans-serif;
-}
-
-/* Estilos CSS Generales */
+/* === LIMPIEZA BÁSICA Y TIPOGRAFÍA === */
 body {
     margin: 0;
-    font-family: var(--font-body);
-    background-color: var(--color-secundario);
-    color: var(--color-texto-oscuro);
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
     line-height: 1.6;
 }
 
 h1, h2, h3 {
-    font-family: var(--font-heading);
-    color: var(--color-primario);
-    margin-bottom: 20px;
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 15px;
+    color: #ff0000;
 }
 
+/* === ENLACES === */
 a {
+    color: #e60000;
     text-decoration: none;
-    color: var(--color-acento);
 }
 
-/* Estilos para la cabecera (header) */
+a:hover {
+    text-decoration: underline;
+}
+
+/* === CABECERA === */
 .cabecera {
-    background-color: var(--color-primario);
-    color: var(--color-texto-claro);
-    padding: 15px 20px;
+    background: #161616;
+    color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    position: sticky; /* Hace que la cabecera se quede arriba al hacer scroll */
+    padding: 15px 30px;
+    position: sticky;
     top: 0;
-    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    z-index: 999;
+    
 }
 
+/* === LOGO === */
 .nombre-empresa {
-    font-size: 2em; /* Más grande para el logo de Voge */
-    font-weight: 700; /* Negrita más fuerte */
-    color: var(--color-acento); /* Color de acento para el logo */
-    letter-spacing: 2px; /* Espaciado entre letras para el logo */
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+
+.nombre-empresa img {
+    height: 50px;
+    object-fit: contain;
 }
 
 .opciones-cabecera ul {
     list-style: none;
+    display: flex;
+    gap: 25px;
     margin: 0;
     padding: 0;
-    display: flex;
-    gap: 30px;
 }
 
 .opciones-cabecera li a {
-    color: var(--color-texto-claro);
-    font-size: 1.1em;
-    font-weight: 600; /* Un poco más de negrita */
-    transition: color 0.3s ease, transform 0.3s ease;
-    position: relative; /* Para el efecto de subrayado */
+    color: #fff;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
 .opciones-cabecera li a:hover {
-    color: var(--color-acento);
-    transform: translateY(-2px); /* Pequeño efecto de elevación */
+    color: #e60000;
 }
 
-/* Efecto de subrayado al pasar el ratón */
-.opciones-cabecera li a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 0;
-    height: 2px;
-    background-color: var(--color-acento);
-    transition: width 0.3s ease;
-}
-
-.opciones-cabecera li a:hover::after {
-    width: 100%;
-}
-
-
-/* Estilos para la Sección Hero/Banner Principal */
+/* === HERO === */
 .hero-section {
-    background: url('https://i.ytimg.com/vi/IszbvSrqIeo/maxresdefault.jpg') no-repeat center center/cover; /* Imagen de fondo grande */
-    color: var(--color-texto-claro);
+    background: url('https://i.ytimg.com/vi/IszbvSrqIeo/maxresdefault.jpg') center/cover no-repeat;
+    color: #fff;
     text-align: center;
-    padding: 150px 20px; /* Gran padding para espacio */
+    padding: 150px 20px;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .hero-section::before {
-    content: '';
+    content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Superposición oscura para que el texto resalte */
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
     z-index: 1;
 }
 
@@ -119,202 +89,135 @@ a {
     position: relative;
     z-index: 2;
     max-width: 800px;
+    margin: auto;
 }
 
-.hero-contenido h1 {
-    font-size: 3.5em;
-    margin-bottom: 20px;
-    color: var(--color-texto-claro); /* Aseguramos que el título sea blanco */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-.hero-contenido p {
-    font-size: 1.4em;
-    margin-bottom: 40px;
-    color: var(--color-texto-claro);
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-}
-
-/* Estilos para el botón CTA */
 .cta-button {
     display: inline-block;
-    background-color: var(--color-acento);
-    color: var(--color-texto-claro);
+    background: #e60000;
+    color: #fff;
     padding: 15px 30px;
-    border-radius: 5px;
-    font-size: 1.2em;
     font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    transition: 0.3s;
+    margin-top: 20px;
 }
 
 .cta-button:hover {
-    background-color: darken(var(--color-acento), 10%); /* Oscurece el color al pasar el ratón */
-    transform: translateY(-3px);
+    background: #c00000;
 }
 
-
-/* Estilos para el cuerpo principal (main content) */
+/* === CONTENIDO PRINCIPAL === */
 .cuerpo-principal {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 60px 20px;
-    text-align: center;
-    max-width: 1200px; /* Limita el ancho del contenido principal */
-    margin: 0 auto; /* Centra el contenido principal */
 }
 
-/* Sección "Descubre Voge" */
 .seccion-descubre {
-    background-color: var(--color-texto-claro);
-    padding: 50px;
-    margin-bottom: 60px;
+    background: #fff;
+    padding: 40px;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-}
-
-.seccion-descubre h2 {
-    font-size: 2.5em;
-    color: var(--color-acento);
-}
-
-.seccion-descubre p {
-    max-width: 800px;
-    margin: 20px auto 30px auto;
-    font-size: 1.1em;
-    color: var(--color-texto-oscuro);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    margin-bottom: 60px;
+    text-align: center;
 }
 
 .secondary-button {
     display: inline-block;
-    background-color: transparent;
-    border: 2px solid var(--color-primario);
-    color: var(--color-primario);
-    padding: 12px 25px;
-    border-radius: 5px;
-    font-size: 1.1em;
+    border: 2px solid #1a1a1a;
+    color: #1a1a1a;
+    padding: 10px 25px;
     font-weight: bold;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+    transition: 0.3s;
+    margin-top: 15px;
 }
 
 .secondary-button:hover {
-    background-color: var(--color-primario);
-    color: var(--color-texto-claro);
+    background: #1a1a1a;
+    color: #fff;
 }
 
-/* Sección de Modelos Destacados */
+/* === SECCIÓN MODELOS === */
 .seccion-modelos {
-    margin-bottom: 60px;
-}
-
-.seccion-modelos h2 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-}
-
-.seccion-modelos > p { /* Selector directo para el párrafo debajo del h2 */
-    margin-bottom: 40px;
-    font-size: 1.1em;
+    margin-bottom: 0px;
+    text-align: center;
 }
 
 .modelos-grid {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
-    flex-wrap: wrap;
+    margin-top: 30px;
+    
 }
 
 .tarjeta-producto {
-    background-color: var(--color-texto-claro);
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    background: #fff;
     padding: 20px;
-    width: 320px; /* Un poco más ancho para las imágenes de motos */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative; /* Para posibles insignias o efectos */
-    overflow: hidden; /* Asegura que nada se salga del borde redondeado */
 }
 
 .tarjeta-producto:hover {
-    transform: translateY(-8px); /* Pequeño levantamiento al pasar el ratón */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 .tarjeta-producto img {
-    max-width: 100%;
-    height: 200px; /* Altura fija para las imágenes de modelos */
+    width: 100%;
+    height: 260px;
     object-fit: cover;
     border-radius: 4px;
     margin-bottom: 15px;
 }
 
-.nombre-producto {
-    font-size: 1.6em; /* Más grande para el nombre del modelo */
-    font-weight: 700;
-    color: var(--color-primario);
-    margin-bottom: 8px;
-}
-
-.descripcion-producto {
-    font-size: 0.95em;
-    color: #666;
-    margin-bottom: 15px;
-    min-height: 40px; /* Para mantener la altura de las tarjetas más consistente */
-}
-
 .opcion-comprar {
-    display: block;
-    background-color: var(--color-primario); /* Color oscuro para el botón de la tarjeta */
-    color: var(--color-texto-claro);
+    background: #1a1a1a;
+    color: #fff;
     padding: 10px 15px;
     border-radius: 5px;
+    margin-top: auto;
     font-weight: bold;
-    margin-top: auto; /* Empuja el botón y precio hacia abajo */
-    transition: background-color 0.3s ease;
+    transition: 0.3s;
 }
 
 .opcion-comprar:hover {
-    background-color: var(--color-acento); /* Cambia a color de acento al pasar el ratón */
+    background: #e60000;
 }
 
 .precio-producto {
-    font-size: 1.3em;
-    color: var(--color-acento); /* Color de acento para el precio */
-    margin-top: 10px;
+    color: #e60000;
     font-weight: 700;
+    margin-top: 10px;
+    font-size: 1.2em;
 }
 
-/* Pie de Página (Footer) */
+/* === FOOTER === */
 .pie-pagina {
-    background-color: var(--color-primario);
-    color: var(--color-texto-claro);
-    padding: 40px 20px;
+    background: #1a1a1a;
+    color: #fff;
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
     gap: 30px;
-    text-align: left;
+    justify-content: space-between;
+    padding: 40px 30px;
 }
 
 .footer-columna {
-    flex: 1; /* Permite que las columnas se distribuyan el espacio */
-    min-width: 250px; /* Ancho mínimo para evitar que se aplasten */
-    padding: 10px;
+    flex: 1;
+    min-width: 250px;
 }
 
 .footer-columna h4 {
-    font-size: 1.3em;
-    color: var(--color-acento);
+    color: #e60000;
     margin-bottom: 15px;
-}
-
-.footer-columna p, .footer-columna ul {
-    font-size: 0.95em;
-    color: #bbb;
-    margin-bottom: 10px;
 }
 
 .footer-columna ul {
@@ -324,106 +227,60 @@ a {
 
 .footer-columna ul li a {
     color: #bbb;
-    transition: color 0.3s ease;
-    display: block; /* Para que cada enlace ocupe su propia línea */
+    display: block;
     margin-bottom: 5px;
+    transition: 0.3s;
 }
 
 .footer-columna ul li a:hover {
-    color: var(--color-acento);
+    color: #e60000;
 }
 
 .redes-sociales a {
     display: inline-block;
-    color: var(--color-texto-claro);
-    margin-right: 15px;
-    font-size: 1em;
-    border: 1px solid #bbb;
+    margin-right: 10px;
     padding: 8px 12px;
     border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    border: 1px solid #bbb;
+    color: #fff;
+    transition: 0.3s;
 }
 
 .redes-sociales a:hover {
-    background-color: var(--color-acento);
-    color: var(--color-texto-claro);
-    border-color: var(--color-acento);
+    background: #e60000;
+    border-color: #e60000;
 }
 
-/* Media Queries para Responsividad */
-@media (max-width: 768px) {
-    .cabecera {
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    .nombre-empresa {
-        margin-bottom: 15px;
-    }
-
-    .opciones-cabecera ul {
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 15px;
-        width: 100%; /* Ocupa todo el ancho */
-        text-align: center;
-    }
-
-    .hero-contenido h1 {
-        font-size: 2.5em;
-    }
-
-    .hero-contenido p {
-        font-size: 1.1em;
-    }
-
-    .cuerpo-principal {
-        padding: 30px 15px;
-    }
-
-    .seccion-descubre {
-        padding: 30px;
-    }
-
-    .seccion-descubre h2, .seccion-modelos h2 {
-        font-size: 2em;
-    }
-
-    .modelos-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .tarjeta-producto {
-        width: 90%; /* Más ancho en móviles */
-        margin-bottom: 20px; /* Espacio entre tarjetas apiladas */
-    }
-
-    .pie-pagina {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-columna {
-        min-width: unset; /* Quita el mínimo para que se adapten */
-        width: 100%;
-        margin-bottom: 20px;
-    }
-    .footer-columna ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Centra los enlaces de la lista */
-    }
-    .redes-sociales {
-        display: flex;
-        justify-content: center; /* Centra los iconos de redes sociales */
-        gap: 10px; /* Espacio entre los iconos */
-    }
+/* Videos */
+.media-container {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 4px;
 }
 
-/* Función darken (no es CSS estándar, si usas Sass/Less funcionaría. Para CSS puro, necesitas un valor hex manual) */
-/* Si no usas preprocesadores, reemplaza `darken(var(--color-acento), 10%)` con un color fijo. Por ejemplo: */
-.cta-button:hover {
-    background-color: #c00000; /* Un rojo un poco más oscuro que #e60000 */
-    transform: translateY(-3px);
+.media-container img,
+.media-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+  border-radius: 4px;
+}
+
+.media-container video {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.tarjeta-producto:hover .media-container video {
+  opacity: 1;
+}
+
+.tarjeta-producto:hover .media-container img {
+  opacity: 0;
 }

@@ -1,134 +1,425 @@
-/* Estilos CSS Generales */
+/* ========================== */
+/*        ESTILOS GLOBALES    */
+/* ========================== */
+
 body {
+    background-color: #f0f0f0;
+    color: #333333;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
 }
 
-/* Estilos para la cabecera (header) */
+h1, h2, h3 {
+    color: #1a1a1a;
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #e60000;
+    text-decoration: none;
+}
+
+/* ========================== */
+/*         CABECERA           */
+/* ========================== */
+
 .cabecera {
-    background-color: #333;
-    color: white;
+    align-items: center;
+    background-color: #1a1a1a;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
     padding: 15px 20px;
-    display: flex; /* Habilita Flexbox para alinear elementos */
-    justify-content: space-between; /* Distribuye el espacio entre los elementos: uno a la izquierda, el otro a la derecha */
-    align-items: center; /* Centra los elementos verticalmente */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .nombre-empresa {
-    font-size: 1.8em; /* Tamaño de fuente para el nombre de la empresa */
-    font-weight: bold; /* Negrita */
+    color: #e60000;
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 2px;
 }
 
 .opciones-cabecera ul {
-    list-style: none; /* Elimina los puntos de la lista */
+    display: flex;
+    gap: 30px;
+    list-style: none;
     margin: 0;
     padding: 0;
-    display: flex; /* Habilita Flexbox para las opciones de navegación */
-    gap: 25px; /* Espacio entre cada opción de la lista */
 }
 
 .opciones-cabecera li a {
-    color: rgb(255, 255, 255); /* Color del texto de los enlaces */
-    text-decoration: none; /* Elimina el subrayado de los enlaces */
-    font-size: 1.1em; /* Tamaño de fuente de los enlaces */
-    transition: color 0.3s ease; /* Transición suave para el cambio de color al pasar el ratón */
+    color: #ffffff;
+    font-size: 1.1em;
+    font-weight: 600;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .opciones-cabecera li a:hover {
-    color: #ffd700; /* Color del texto al pasar el ratón (dorado) */
+    color: #e60000;
+    transform: translateY(-2px);
 }
 
-/* Estilos para el cuerpo principal (main content) */
+.opciones-cabecera li a::after {
+    background-color: #e60000;
+    bottom: -5px;
+    content: '';
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transition: width 0.3s ease;
+    width: 0;
+}
+
+.opciones-cabecera li a:hover::after {
+    width: 100%;
+}
+
+/* ========================== */
+/*        SECCIÓN HERO        */
+/* ========================== */
+
+.hero-section {
+    align-items: center;
+    background: url('https://i.ytimg.com/vi/IszbvSrqIeo/maxresdefault.jpg') no-repeat center center/cover;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    padding: 150px 20px;
+    position: relative;
+    text-align: center;
+}
+
+.hero-section::before {
+    background: rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.hero-contenido {
+    max-width: 800px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-contenido h1 {
+    color: #ffffff;
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-contenido p {
+    color: #ffffff;
+    font-size: 1.4em;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.cta-button {
+    background-color: #e60000;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+    display: inline-block;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 15px 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #c00000;
+    transform: translateY(-3px);
+}
+
+/* ========================== */
+/*     CUERPO PRINCIPAL       */
+/* ========================== */
+
 .cuerpo-principal {
-    padding: 40px 20px; /* Espaciado interno alrededor del contenido principal */
-    text-align: center; /* Centra el texto dentro de esta sección */
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 60px 20px;
+    text-align: center;
 }
 
-.seccion-productos {
-    display: flex; /* Habilita Flexbox para las tarjetas de productos */
-    justify-content: center; /* Centra las tarjetas horizontalmente */
-    gap: 30px; /* Espacio entre las tarjetas de productos */
-    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan a la siguiente línea si no hay espacio */
+/* -------- Sección Descubre -------- */
+
+.seccion-descubre {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    margin-bottom: 60px;
+    padding: 50px;
+}
+
+.seccion-descubre h2 {
+    color: #e60000;
+    font-size: 2.5em;
+}
+
+.seccion-descubre p {
+    color: #333333;
+    font-size: 1.1em;
+    margin: 20px auto 30px;
+    max-width: 800px;
+}
+
+.secondary-button {
+    background-color: transparent;
+    border: 2px solid #1a1a1a;
+    border-radius: 5px;
+    color: #1a1a1a;
+    display: inline-block;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 12px 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.secondary-button:hover {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+/* -------- Sección Modelos -------- */
+
+.seccion-modelos {
+    margin-bottom: 60px;
+}
+
+.seccion-modelos h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.seccion-modelos > p {
+    font-size: 1.1em;
+    margin-bottom: 40px;
+}
+
+.modelos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
 }
 
 .tarjeta-producto {
-    background-color: #fff; /* Fondo blanco para cada tarjeta */
-    border: 1px solid #ddd; /* Borde gris claro */
-    border-radius: 8px; /* Esquinas redondeadas */
-    padding: 20px; /* Espaciado interno */
-    width: 300px; /* Ancho fijo para cada tarjeta */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    display: flex; /* Habilita Flexbox para el contenido de la tarjeta */
-    flex-direction: column; /* Apila los elementos dentro de la tarjeta verticalmente */
-    align-items: center; /* Centra los elementos horizontalmente dentro de la tarjeta */
-    text-align: center; /* Centra el texto dentro de la tarjeta */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para efectos hover */
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 320px;
 }
 
 .tarjeta-producto:hover {
-    transform: translateY(-5px); /* Eleva la tarjeta ligeramente al pasar el ratón */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada al pasar el ratón */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-8px);
 }
 
 .tarjeta-producto img {
-    max-width: 100%; /* Asegura que la imagen no exceda el ancho de la tarjeta */
-    height: 180px; /* Altura fija para todas las imágenes */
-    object-fit: cover; /* Recorta la imagen para que cubra el área sin distorsionarse */
-    border-radius: 4px; /* Pequeñas esquinas redondeadas para la imagen */
-    margin-bottom: 15px; /* Espacio debajo de la imagen */
+    border-radius: 4px;
+    height: 200px;
+    margin-bottom: 15px;
+    max-width: 100%;
+    object-fit: cover;
 }
 
 .nombre-producto {
-    font-size: 1.4em; /* Tamaño de fuente para el nombre del producto */
-    font-weight: bold; /* Negrita */
-    color: #333; /* Color de texto oscuro */
-    margin-bottom: 10px; /* Espacio debajo del nombre */
+    color: #1a1a1a;
+    font-size: 1.6em;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.descripcion-producto {
+    color: #666666;
+    font-size: 0.95em;
+    margin-bottom: 15px;
+    min-height: 40px;
 }
 
 .opcion-comprar {
-    display: block; /* Hace que el enlace ocupe todo el ancho disponible */
-    background-color: #007bff; /* Color de fondo azul para el botón */
-    color: white; /* Color del texto blanco */
-    padding: 10px 15px; /* Espaciado interno del botón */
-    border-radius: 5px; /* Esquinas redondeadas del botón */
-    text-decoration: none; /* Elimina el subrayado del enlace */
-    font-weight: bold; /* Negrita en el texto del botón */
-    margin-top: 15px; /* Espacio encima del botón */
-    transition: background-color 0.3s ease; /* Transición suave para el cambio de color al pasar el ratón */
+    background-color: #1a1a1a;
+    border-radius: 5px;
+    color: #ffffff;
+    display: block;
+    font-weight: bold;
+    margin-top: auto;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
 }
 
 .opcion-comprar:hover {
-    background-color: #0056b3; /* Color de fondo más oscuro al pasar el ratón */
+    background-color: #e60000;
 }
 
 .precio-producto {
-    font-size: 1.2em; /* Tamaño de fuente para el precio */
-    color: #555; /* Color de texto gris */
-    margin-top: 8px; /* Espacio encima del precio */
-    font-weight: bold; /* Negrita */
+    color: #e60000;
+    font-size: 1.3em;
+    font-weight: 700;
+    margin-top: 10px;
 }
 
-/* Media Queries para Responsividad (Opcional pero muy recomendado) */
+/* ========================== */
+/*            FOOTER          */
+/* ========================== */
+
+.pie-pagina {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-around;
+    padding: 40px 20px;
+    text-align: left;
+}
+
+.footer-columna {
+    flex: 1;
+    min-width: 250px;
+    padding: 10px;
+}
+
+.footer-columna h4 {
+    color: #e60000;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+
+.footer-columna p, .footer-columna ul {
+    color: #bbbbbb;
+    font-size: 0.95em;
+    margin-bottom: 10px;
+}
+
+.footer-columna ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-columna ul li a {
+    color: #bbbbbb;
+    display: block;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.footer-columna ul li a:hover {
+    color: #e60000;
+}
+
+.redes-sociales a {
+    border: 1px solid #bbbbbb;
+    border-radius: 5px;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 1em;
+    margin-right: 15px;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.redes-sociales a:hover {
+    background-color: #e60000;
+    border-color: #e60000;
+    color: #ffffff;
+}
+
+/* ========================== */
+/*     RESPONSIVE MOBILE      */
+/* ========================== */
+
 @media (max-width: 768px) {
-    /* En pantallas más pequeñas (tablets y móviles) */
     .cabecera {
-        flex-direction: column; /* Apila los elementos de la cabecera verticalmente */
-        padding: 10px; /* Menos padding */
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .nombre-empresa {
+        margin-bottom: 15px;
     }
 
     .opciones-cabecera ul {
-        flex-direction: column; /* Apila las opciones de navegación verticalmente */
-        gap: 10px; /* Reduce el espacio entre ellas */
-        margin-top: 15px; /* Añade un poco de margen superior */
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .hero-contenido h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-contenido p {
+        font-size: 1.1em;
+    }
+
+    .cuerpo-principal {
+        padding: 30px 15px;
+    }
+
+    .seccion-descubre {
+        padding: 30px;
+    }
+
+    .seccion-descubre h2,
+    .seccion-modelos h2 {
+        font-size: 2em;
+    }
+
+    .modelos-grid {
+        align-items: center;
+        flex-direction: column;
     }
 
     .tarjeta-producto {
-        width: 80%; /* Las tarjetas ocupan más ancho en pantallas pequeñas */
+        margin-bottom: 20px;
+        width: 90%;
     }
 
-    .seccion-productos {
-        flex-direction: column; /* Apila las tarjetas de productos verticalmente */
-        align-items: center; /* Centra las tarjetas apiladas */
+    .pie-pagina {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-columna {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .footer-columna ul {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .redes-sociales {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
     }
 }

@@ -3,50 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Ejemplo de Empresa</title>
+    <title>Voge Motorcycles - Pasión por la Carretera</title>
     <link rel="stylesheet" href="./styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Oswald:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="cabecera">
-        <div class="nombre-empresa">VOGE</div>
-        <nav class="opciones-cabecera">
+    <header class="header">
+        <div class="logo">VOGE</div>
+        <nav class="nav-links">
             <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#productos">Motos</a></li>
-                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#modelos">Modelos</a></li>
+                <li><a href="#experiencia">Experiencia Voge</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="cuerpo-principal">
-        <h1>Nuestras Pricipales Motos</h1>
-        <p>¡Descubre lo que tienen para ofrecerte!</p>
+    <section class="hero-section" id="hero">
+        <div class="hero-content">
+            <h1>Libera tu Espíritu con VOGE</h1>
+            <p>Rendimiento, innovación y diseño audaz en cada viaje.</p>
+            <a href="#modelos" class="btn-primary">Explora Modelos</a>
+        </div>
+    </section>
 
-        <section class="seccion-productos">
-            <div class="tarjeta-producto">
-                <img src="https://motos.espirituracer.com/archivos/2021/01/voge-500-r-03.jpg" alt="Imagen del Producto 1">
-                <h3 class="nombre-producto">Voge 525r</h3>
-                <a href="#" class="opcion-comprar">Ver Detalles</a>
-                <p class="precio-producto">Precio: $30.999.999</p>
-            </div>
+    <main class="main-content">
+        <section class="section-discover">
+            <h2>Descubre la Esencia VOGE</h2>
+            <p>En VOGE, nuestra pasión es la carretera abierta y la libertad que cada viaje ofrece. Diseñamos motocicletas que combinan tecnología de vanguardia, fiabilidad inquebrantable y un estilo que no pasa desapercebido. Únete a la comunidad VOGE y experimenta el camino como nunca antes.</p>
+            <a href="#experiencia" class="btn-secondary">Nuestra Historia</a>
+        </section>
 
-            <div class="tarjeta-producto">
-                <img src="https://www.demotos.com.co/wp-content/uploads/2024/05/VOGE-525DSX-05.webp" alt="Imagen del Producto 2">
-                <h3 class="nombre-producto">Voge 525 Dsx</h3>
-                <a href="#" class="opcion-comprar">Ver Detalles</a>
-                <p class="precio-producto">Precio: $35.999.999</p>
-            </div>
+        <section class="section-models" id="modelos">
+            <h2>Modelos Destacados</h2>
+            <p>Encuentra la moto perfecta para tu próxima aventura.</p>
 
-            <div class="tarjeta-producto">
-                <img src="https://www.mundodeportivo.com/uploads/2023/03/13/655538933c309.jpeg" alt="Imagen del Producto 3">
-                <h3 class="nombre-producto">Nombre del Producto</h3>
-                <a href="#" class="opcion-comprar">Ver Detalles</a>
-                <p class="precio-producto">Precio: $ZZZ.ZZ</p>
+            <div class="models-grid">
+                <div class="product-card">
+                    <img src="https://assets.website-files.com/64b584e030e46b5a7698547b/64f9f74070a256950228d7a1_DS525X-VOGE.jpg" alt="Voge 525DSX - Adventure">
+                    <h3>Voge 525DSX</h3>
+                    <p class="description">La aventura te espera. Potencia y confort para cualquier terreno.</p>
+                    <a href="#" class="btn-buy">Ver Especificaciones</a>
+                    <p class="price">Desde $XXX.XXX</p>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://cdn.motor1.com/images/mgl/kZlBvN/s6/voge-sr4-max.jpg" alt="Voge SR4 MAX - Scooter Premium">
+                    <h3>Voge SR4 MAX</h3>
+                    <p class="description">El scooter premium que redefine la movilidad urbana.</p>
+                    <a href="#" class="btn-buy">Descubre su Diseño</a>
+                    <p class="price">Desde $YYY.YYY</p>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://media.solomoto.es/assets/styles/full_img/public/noticias/voge_brivido_300r_2020.jpg?itok=38wX2mYk" alt="Voge Brivido 300R - Naked Deportiva">
+                    <h3>Voge Brivido 300R</h3>
+                    <p class="description">Agilidad y deportividad para dominar la ciudad y la carretera.</p>
+                    <a href="#" class="btn-buy">Pruébala Ahora</a>
+                    <p class="price">Desde $ZZZ.ZZZ</p>
+                </div>
             </div>
         </section>
     </main>
 
-    </body>
+    <footer class="footer">
+        <div class="footer-col">
+            <h4>VOGE Motorcycles</h4>
+            <p>Tu viaje comienza aquí.</p>
+            <p>&copy; 2024 Voge Motorcycles. Todos los derechos reservados.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Enlaces Rápidos</h4>
+            <ul>
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#modelos">Modelos</a></li>
+                <li><a href="#experiencia">Experiencia</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#">Política de Privacidad</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Contacto</h4>
+            <p>Email: info@voge.com</p>
+            <p>Teléfono: +123 456 7890</p>
+            <p>Dirección: Calle Ficticia 123, Ciudad, País</p>
+            <div class="social-links">
+                <a href="#" target="_blank">Facebook</a>
+                <a href="#" target="_blank">Instagram</a>
+                <a href="#" target="_blank">YouTube</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
 </html>
