@@ -38,7 +38,7 @@ a:hover {
     
 }
 
-/* === LOGO === */
+/* === LOGO  */
 .nombre-empresa {
     height: auto;
     display: flex;
@@ -170,14 +170,6 @@ a:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
-.tarjeta-producto img {
-    width: 100%;
-    height: 260px;
-    object-fit: cover;
-    border-radius: 4px;
-    margin-bottom: 15px;
-}
-
 .opcion-comprar {
     background: #1a1a1a;
     color: #fff;
@@ -198,6 +190,41 @@ a:hover {
     margin-top: 10px;
     font-size: 1.2em;
 }
+
+/* Videos */
+.media-container {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.media-container img,
+.media-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+  border-radius: 4px;
+}
+
+.media-container video {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.tarjeta-producto:hover .media-container video {
+  opacity: 1;
+}
+
+.tarjeta-producto:hover .media-container img {
+  opacity: 0;
+}
+
 
 /* === FOOTER === */
 .pie-pagina {
@@ -251,36 +278,3 @@ a:hover {
     border-color: #e60000;
 }
 
-/* Videos */
-.media-container {
-  position: relative;
-  width: 100%;
-  height: 180px;
-  overflow: hidden;
-  border-radius: 4px;
-}
-
-.media-container img,
-.media-container video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: opacity 0.3s ease;
-  border-radius: 4px;
-}
-
-.media-container video {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.tarjeta-producto:hover .media-container video {
-  opacity: 1;
-}
-
-.tarjeta-producto:hover .media-container img {
-  opacity: 0;
-}
