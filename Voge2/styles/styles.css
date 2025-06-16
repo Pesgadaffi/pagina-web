@@ -191,6 +191,87 @@ a:hover {
     font-size: 1.2em;
 }
 
+.agendar-btn {
+    display: inline-block;
+    background-color: #e60000;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-top: 40px;
+    font-size: 1em;
+}
+
+.agendar-btn:hover {
+    background-color: #c00000;
+}
+
+/* === MODAL DE PRUEBA === */
+.prueba-modal, .prueba-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 3000;
+}
+
+.prueba-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.prueba-modal {
+    background-color: white;
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 3100;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.prueba-modal h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.prueba-modal input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.prueba-modal button {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    background-color: #e60000;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.prueba-modal button:hover {
+    background-color: #c00000;
+}
+
+.prueba-overlay.mostrar,
+.prueba-modal.mostrar {
+    display: block;
+}
+
 /* Videos */
 .media-container {
   position: relative;
@@ -278,3 +359,79 @@ a:hover {
     border-color: #e60000;
 }
 
+/* === RESPONSIVE === */
+@media (max-width: 400px) {
+    .cabecera {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .opciones-cabecera ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-section {
+        padding: 60px 15px;
+    }
+
+    .cta-button {
+        font-size: 0.9em;
+        padding: 10px 20px;
+    }
+
+    .hero-contenido h1 {
+        font-size: 1.8em;
+    }
+
+    .modelos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tarjeta-producto img {
+        height: 160px;
+    }
+
+    .footer-columna h4 {
+        font-size: 1em;
+    }
+}
+
+/* === FICHA TÉCNICA MODAL (ESTILOS BÁSICOS) === */
+.ficha-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    z-index: 2000;
+    max-width: 400px;
+    display: none;
+}
+
+.ficha-modal.mostrar {
+    display: block;
+}
+
+.ficha-modal h4 {
+    margin-top: 0;
+}
+
+.ficha-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1500;
+    display: none;
+}
+
+.ficha-overlay.mostrar {
+    display: block;
+}
